@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>lpil svg - symbol</title>
+</head>
+<body>
+
+  <svg height="300" width="300">
+    <symbol id="sym-row">
+      <rect x="0"   y="0"   height="50" width="50" />
+      <rect x="100" y="0"   height="50" width="50" />
+      <rect x="200" y="0"   height="50" width="50" />
+    </symbol>
+
+    <symbol id="sym-board">
+      <use xlink:href="#sym-row" x="0"  y="0"   />
+      <use xlink:href="#sym-row" x="50" y="50"  />
+      <use xlink:href="#sym-row" x="0"  y="100" />
+      <use xlink:href="#sym-row" x="50" y="150" />
+      <use xlink:href="#sym-row" x="0"  y="200" />
+      <use xlink:href="#sym-row" x="50" y="250" />
+    </symbol>
+
+    <!-- Draw -->
+    <use xlink:href="#sym-board" />
+  </svg>
+
+</body>
+</html>
